@@ -72,9 +72,6 @@ app.post('/signup',(req,res)=>{
     // }
 })
 
-// app.get('/page',(req,res)=>{
-//     res.render("page.ejs");
-// })
 
 app.get("/page", (req, res) => {
     let today = new Date().toLocaleString("en-US", { weekday: "long" });
