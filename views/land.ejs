@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap'); 
+*{
+    text-transform: capitalize;
+    color: black;
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+}
+
+
+
+body{
+    background: linear-gradient(135deg, #1e3c72, #2a5298, #0f2027);
+}
+#mainpage{
+    background: rgba(255, 255, 255, 0.1);
+    position:  absolute;
+    margin-left: 30%;
+    margin-top: 7%;
+    padding: 40px;
+    text-align: center;
+    border-radius: 15px;
+    width:450px;
+    height: 300px;
+    animation: fadeIn 1s ease-in-out;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3); /* Added shadow */
+    /* transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out; */
+    
+    
+}
+p{
+    text-align: center;
+    margin: 0;
+}
+
+#heading{
+    padding-top: 10px;
+    padding-bottom: 2px;
+    font-size: 50px;
+    margin-bottom: 2px;
+    color: white;
+}
+#heading2{
+    padding-left: 7px;
+    padding-right: 7px;
+    margin-top: 10px;
+    font-size:20px ;
+    color: white;
+}
+#enter{
+    display: flex;
+    justify-content: center;
+}
+.button{
+
+    height: 40px;
+    width: 120px;
+    background: linear-gradient(90deg, #ff9800, #ff5722);
+    padding: 15px 35px;
+    border-radius: 50px;
+    margin-top: 25px;
+    position: relative;
+    display: inline-block;
+    text-decoration: none;
+    color: white;
+    font-weight: 400;
+    font-size: 22px;
+}
+
+.button:hover {
+    transform: scale(1.1);
+    background: linear-gradient(90deg, #ff5722, #ff9800);
+    box-shadow: 0 6px 20px rgba(255, 87, 34, 0.8);
+}
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.3); /* Reduce opacity */
+    backdrop-filter: blur(2px); /* Reduce blur */
+    z-index: -1; /* Move it behind the content */
+}
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+    </style>
+</head>
+<body>
+    <div class="overlay"></div> 
+    <div id="mainpage">
+    <p id="heading">dynamic<br>time table</p>
+    <p id="heading2">stay updated .Stay on track</p>
+   <div id="enter"> <a href="/login" class="button">Enter Site</a></div>   
+    </div>
+    
+</body>
+</html>

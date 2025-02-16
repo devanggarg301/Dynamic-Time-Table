@@ -1,0 +1,29 @@
+year,branch,section,day,start_time,end_time,subject,teacher,room
+1,CSE,B1,Monday,10:00:00,12:00:00,DS (Lab),Dr.Vrinda Yadav,5th Floor
+1,CSE,B1,Monday,12:00:00,13:00:00,LUNCH,-,-
+1,CSE,B1,Monday,13:00:00,14:00:00,AP,Dr.Amit Shewale,Hall2
+1,CSE,B1,Monday,14:00:00,15:00:00,DS,Dr.Vrinda Yadav,Hall2
+1,CSE,B1,Monday,15:00:00,16:00:00,M&G,Dr.Anup Kumar,Hall2
+1,CSE,B1,Monday,16:00:00,17:00:00,TUT,Dr.Naresh Nendunuri,Hall2
+1,CSE,B1,Tuesday,10:00:00,12:00:00,COMSK (Lab),Dr.Madhuri Tayde,CR 101
+1,CSE,B1,Tuesday,12:00:00,13:00:00,LUNCH,-,-
+1,CSE,B1,Tuesday,13:00:00,14:00:00,DS,Dr.Vrinda Yadav,Hall2
+1,CSE,B1,Tuesday,14:00:00,15:00:00,DE,Dr.Nikhil,Hall2
+1,CSE,B1,Tuesday,15:00:00,16:00:00,MTTDE,Dr.Naresh Nendunuri,Hall2
+1,CSE,B1,Tuesday,16:00:00,17:00:00,COMSK,Dr.Madhuri Tayde,Hall2
+1,CSE,B1,Wednesday,10:00:00,12:00:00,DE (Lab),Dr.Nikhil,4th Floor
+1,CSE,B1,Wednesday,12:00:00,13:00:00,LUNCH,-,-
+1,CSE,B1,Wednesday,13:00:00,14:00:00,M&G,Dr.Anup Kumar,Hall2
+1,CSE,B1,Wednesday,14:00:00,15:00:00,AP,Dr.Amit Shewale,Hall2
+1,CSE,B1,Wednesday,15:00:00,16:00:00,MTTDE,Dr.Naresh Nendunuri,Hall2
+1,CSE,B1,Wednesday,16:00:00,17:00:00,DE,Dr.Nikhil,Hall2
+1,CSE,B1,Thursday,10:00:00,12:00:00,AP (Lab),Dr.Neha Kasture,5th Floor
+1,CSE,B1,Thursday,12:00:00,13:00:00,LUNCH,-,-
+1,CSE,B1,Thursday,13:00:00,14:00:00,AP,Dr.Amit Shewale,Hall2
+1,CSE,B1,Thursday,14:00:00,15:00:00,COMSK,Dr.Madhuri Tayde,Hall2
+1,CSE,B1,Thursday,15:00:00,16:00:00,M&G,Dr.Anup Kumar,Hall2
+1,CSE,B1,Friday,10:00:00,12:00:00,M&G (Lab),Dr.Prashant Joshi,2nd Floor
+1,CSE,B1,Friday,12:00:00,13:00:00,LUNCH,-,-
+1,CSE,B1,Friday,13:00:00,14:00:00,DS,Dr.Vrinda Yadav,Hall2
+1,CSE,B1,Friday,14:00:00,15:00:00,DE,Dr.Nikhil,Hall2
+1,CSE,B1,Friday,15:00:00,16:00:00,MTTDE,Dr.Naresh Nendunuri,Hall2

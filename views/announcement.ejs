@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+    margin: 0px;
+    color:white;
+}
+body{
+    background: linear-gradient(to right, #0d3965, #092039);
+    display: flex;
+}
+.navbar {
+    height: 100vh;
+    width: 18%;
+    background: linear-gradient(to right, #0d3965, #092039);
+    border-right: white solid 1px;
+    position: fixed;
+}
+
+.heading {
+    width: 100%;
+    height: 60px;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 20px;
+    padding-top: 8px;
+}
+
+.options {
+    margin:0px;
+    font-size: 20px;
+    padding-top: 20px;
+}
+
+.home {
+    width: 99%;
+    height: 35px;
+    padding-top:35px ;
+}
+a{
+    text-decoration: none;
+}
+.home:hover{
+    animation-duration: 0ms;
+    border: solid 2px gray;
+}
+#current{
+    background-color: #041528;
+}
+.content{
+    background-color: #1b263b;
+    position: relative;
+    top:80px;
+    left: 120px;
+}
+.list{
+    text-align: left;
+}
+        .item {
+            background: #2A3D5F;
+            padding: 15px;
+            margin-bottom: 10px;
+            border-radius: 5px;
+            box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+            display: flex;
+            justify-content: space-between;
+        }
+        .content{
+            margin: auto;
+            background: #1B263B;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+            text-align: center;
+            width: 800px;
+        }
+        .content h1 {
+            color: #64B6FF;
+            font-size: 30px;
+            margin-bottom: 20px;
+        }
+        .content a{
+            display: inline-block;
+            padding: 10px 20px;
+            background: #64B6FF;
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            border-radius: 5px;
+            margin-bottom: 20px;
+        }
+        .delete{
+            background-color: #488ecb;
+            /* background-color: rebeccapurple; */
+            border-radius: 20px;
+            height: 35px;
+            width: 90px;
+            position: relative;
+            top:10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <div class="heading">
+            <p><h1>Dynamic<br>Time Table</h1></p>
+        </div>
+        <div class="options">
+            <a href="/page"><div class="home">🏠 Home</div></a>
+            <a href="/timetable"><div class="home">📅 Timetable</div></a>
+          <a href="/notifications">  <div class="home">🔔 Notifications</div></a>
+           <a href="/announcement"> <div class="home" id="current">📢 Announcements</div></a>
+           <a href="/settings"> <div class="home">⚙  Settings</div></a>
+       </div>
+    </div>
+    <div class="content">
+        <div class="announcement_head">
+            <h1>📢 Announcements</h1>
+            <a href="/announcement/add">+ New Announcement</a>
+        </div>
+        <div class="list">    
+               
+                <% post.forEach(announcement => { %>
+                <div class="item">  
+                <div>
+                    <h3 style="color: #64B6FF;margin-bottom: 10px;"><%= announcement.title %></h3>
+                    <p><%= announcement.message %></p>
+                </div>
+                <div>
+                    <form method="post" action="/announcement/<%=announcement.id%>?_method=DELETE">
+                    <button class="delete">Delete Post</button>
+                    </form>
+                </div>
+                </div> 
+              <% }); %>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Document</title>
+
+    <style>
+
+        * {
+
+    margin: 0px;
+
+    color:white;
+
+}
+
+body{
+
+    background: linear-gradient(to right, #0d3965, #092039);
+
+    overflow: hidden;
+
+}
+
+.navbar {
+
+    height: 100vh;
+
+    width: 18%;
+
+    background: linear-gradient(to right, #0d3965, #092039);
+
+    border-right: white solid 1px;
+
+    min-width: 200px;
+
+    flex-shrink: 0;
+
+}
+
+
+
+.heading {
+
+    width: 100%;
+
+    height: 60px;
+
+    font-weight: 700;
+
+    text-align: center;
+
+    margin-bottom: 20px;
+
+    padding-top: 8px;
+
+}
+
+
+
+.options {
+
+    margin:0px;
+
+    font-size: 20px;
+
+    padding-top: 20px;
+
+}
+
+
+
+.home {
+
+    width: 99%;
+
+    height: 35px;
+
+    padding-top:35px ;
+    
+}
+
+#current{
+    background-color: #041528;
+}
+
+a{
+
+    text-decoration: none;
+
+}
+
+.home:hover{
+
+    animation-duration: 0ms;
+
+    border: solid 2px gray;
+
+}
+
+.homepage{
+
+    display:flex;
+
+    height: 100vh;
+
+}
+
+.scheduleheading{
+
+    font-size: 24px;
+
+    display: flex;
+
+    width: 100%;
+
+    margin-top: 4px;
+
+    margin-bottom: 4px;
+
+    margin-right: 12px;
+
+}
+
+.button1{
+
+    margin-top: 5px;
+
+   margin-right: 5px;
+
+   margin-right: 5px;
+
+}
+
+button{
+
+    background-color: #64B6FF;
+
+    font-size: 15px;
+
+    width: 130px;
+
+    height:40px;
+
+    border-radius: 10px;
+
+    margin-right:7px;
+
+    margin-top: 10px;
+
+    margin-right: 20px;
+
+}
+
+button:active{
+
+    background-color: #4376a4;
+
+    opacity:1;
+
+}
+
+.righttop{
+
+    background-color: bisque;
+
+    border-radius: 8px;
+
+    margin-top: 40px;
+
+    margin-left:7px;
+
+    margin-right:7px;
+
+    margin-bottom: 8px;
+
+    width:100%;
+
+    height:70px;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    background-color: #1D3B6C;
+
+}
+
+.rightbottom{
+
+    margin-top:20px;
+
+    border-radius: 8px;
+
+}
+
+.right{
+
+    width:100%;
+
+}
+
+.table{
+
+    margin-top: 40px;
+
+    font-size: 20px;
+
+    border: 2px solid transparent;
+
+    text-align: center;
+
+    color: aliceblue;
+
+    background-color: #39598f;
+
+    border-collapse: collapse;
+
+    margin-right: 7px;
+
+    margin-left:7px;
+
+    border-radius: 10px;
+
+}
+
+table{
+
+    border-collapse: collapse;
+
+    margin-top: 12px;
+
+    margin-left: 10px;
+
+    margin-right: 10px;
+
+    margin-bottom: 12px;
+
+}
+
+.subheading{
+
+    width:350px;
+
+    height:40px;
+
+    margin-bottom: 15px;
+
+    background-color: #5A75A0 ;
+
+    margin: 9px;
+
+    padding-bottom: 5px;
+
+    font-weight: bolder;
+
+    color:  #041528;
+
+}
+
+.data{
+
+    width:350px;
+
+    height:40px;
+
+    margin-bottom: 15px;
+
+}
+
+.row{
+
+    width:350px;
+
+    border-bottom:1px solid white;
+
+}
+
+.firstrow{
+
+    background-color: gray;
+
+    margin:7px;
+
+}.but_edit{
+    display: inline-block;
+    width:50px;
+    height:30px;
+    margin:auto
+}
+.time {
+    font-size: 20px;
+    font-weight: bold;
+    color: white;
+    display: flex;
+    align-items: center;
+    margin-right: 20px;
+}
+
+
+    </style>
+
+</head>
+
+<body>
+
+    <div class="homepage">
+
+    <div class="navbar">
+
+        <div class="heading">
+
+            <p><h1>Dynamic<br>Time Table</h1></p>
+
+        </div>
+
+        <div class="options">
+
+            <a href="/page"><div class="home"  id="current">🏠 Home</div></a>
+
+            <a href="/timetable"><div class="home">📅 Timetable</div></a>
+
+          <a href="/notifications">  <div class="home">🔔 Notifications</div></a>
+
+           <a href="/announcement"> <div class="home">📢 Announcements</div></a>
+
+           <!-- <a href="/todo"> <div class="home">📝 ToDo List</div></a> -->
+
+           <a href="/settings"> <div class="home">⚙  Settings</div></a>
+
+        </div>
+
+    </div><div class="right">
+    <!-- <h2 style="height: 0px;">HI</h2> -->
+    <!-- <h1 style="position: fixed;height: 0;right:0">hi</h1> -->
+    <div class="righttop">
+    <div class="scheduleheading">
+
+     <h1 style=" color:white ;margin-left: 20px;" >Today's Schedule</h1></div>
+
+     <div class="time" id="datetime">
+        <p id="datetime"></p>
+    </div>
+
+    </div>
+
+    <div class="rightbottom">
+
+        <div class="table">
+
+        <table>
+
+            <div class="firstrow">
+
+            <tr>
+
+                <th class="subheading">Time</th>
+
+                <th class="subheading">Subject</th>
+
+                <th class="subheading">Room</th>
+
+                <th class="subheading">Professor</th>
+
+                <th class="subheading"></th>
+
+            </tr>
+
+        </div>
+
+            <tr class="row">
+
+                <td class="data">10:00 - 12:00 p.m</td>
+
+                <td class="data">COMSK</td>
+
+                <td class="data">Room 101</td>
+
+                <td class="data">Madhuri Tayade</td>
+
+                <td class="data"><button class="but_edit">Edit</button>
+                    </td>
+
+            </tr>
+
+            <tr class="row">
+
+                <td class="data">1:00 - 2:00 p.m</td>
+
+                <td class="data">AP</td>
+
+                <td class="data">Hall 2</td>
+
+                <td class="data">Amit Sir</td>
+                <td class="data"><button class="but_edit">Edit</button>
+                </td>
+
+            </tr>
+
+            <tr class="row">
+
+                <td class="data">2:00 - 3:00 p.m</td>
+
+                <td class="data">DS</td>
+
+                <td class="data">Hall 2</td>
+
+                <td class="data">Vrinda Yadav</td>
+
+                <td class="data"><button class="but_edit">Edit</button>
+                </td>
+
+            </tr>
+
+            <tr class="row">
+
+                <td class="data">3:00 - 4:00 p.m</td>
+
+                <td class="data">M&G</td>
+
+                <td class="data">Hall 2</td>
+
+                <td class="data">Anup Kumar Rajak</td>
+                <td class="data"><button class="but_edit">Edit</button>
+                </td>
+            </tr>
+            <tr class="row">
+
+                <td class="data">4:00 - 5:00 p.m</td>
+
+                <td class="data">DE</td>
+
+                <td class="data">Hall 2</td>
+
+                <td class="data">Nikhil Dengre</td>
+                <td class="data"><button class="but_edit">Edit</button>
+                </td>
+            </tr>
+        </table>
+
+    </div>
+
+    </div>
+
+    </div>
+
+    </div>
+    <script>
+        function updateDateTime() {
+            const now = new Date();
+            const options = { 
+                weekday: 'long', year: 'numeric', month: 'long', day: 'numeric',
+                hour: '2-digit', minute: '2-digit', second: '2-digit' 
+            };
+            document.getElementById("datetime").innerHTML = now.toLocaleString('en-US', options);
+        }
+
+        // Update the time every second
+        setInterval(updateDateTime, 1000);
+
+        // Initialize immediately
+        updateDateTime();
+    </script>
+</body>
+
+</html>

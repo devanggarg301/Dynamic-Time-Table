@@ -1,0 +1,20 @@
+<table border="1">
+    <tr>
+        <th>Day</th>
+        <th>10:00:00-12:00:00 (LAB)</th>
+        <th>12:00:00-13:00:00</th>
+        <th>13:00:00-14:00:00</th>
+        <th>14:00:00-15:00:00</th>
+        <th>15:00:00-16:00:00</th>
+        <th>16:00:00-17:00:00</th>
+    </tr>
+    <% for (let day of ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"]) { %>
+        <tr>
+            <td><b><%= day %></b></td>
+            <% let times = ["10:00:00-12:00:00", "12:00:00-13:00:00", "13:00:00-14:00:00", "14:00:00-15:00:00", "15:00:00-16:00:00", "16:00:00-17:00:00"]; %>
+            <% for (let time of times) { %>
+                <td><%= timetable[day] && timetable[day][time] ? timetable[day][time] : "" %></td>
+            <% } %>
+        </tr>
+    <% } %>
+</table>

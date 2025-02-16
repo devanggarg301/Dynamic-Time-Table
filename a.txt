@@ -1,0 +1,26 @@
+animation: fade in:
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+.container {
+    animation: fadeIn 1s ease-in-out;
+}
+
+button hover animation:
+background: linear-gradient(90deg, #ff9800, #ff5722);
+
+.btn:hover {
+    transform: scale(1.1);
+    background: linear-gradient(90deg, #ff5722, #ff9800);
+    box-shadow: 0 6px 20px rgba(255, 87, 34, 0.8);
+}
+
+bg color:
+background: linear-gradient(135deg, #1e3c72, #2a5298, #0f2027);

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+ <html lang="en">
+ <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #title{
+            padding: 0px;
+            margin: 0px;
+        }
+        #message{
+            padding: 0px;
+            margin: 0px;
+        }
+    </style>
+ </head>
+ <body>
+    <form action="/announcement/add" method="POST">
+        <p>Title</p>
+        <input type="text" name="title" id="title">
+        <p id="message">Message</p>
+        <textarea name="message"id="message" rows="3" cols="14"></textarea><br>
+        <button>Add Announcement</button>
+    </form>
+     
+ </body>
+ </html>

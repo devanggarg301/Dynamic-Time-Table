@@ -1,0 +1,32 @@
+year,branch,section,day,start_time,end_time,subject,teacher,room
+1,CSG,A2,Monday,08:00,10:00,,,CR 304
+1,CSG,A2,Monday,10:00,12:00,,,CR 304
+1,CSG,A2,Monday,12:00,13:00,Lunch,,CR 304
+1,CSG,A2,Monday,13:00,14:00,AP,Dr.Puja Gudadhe,CR 304
+1,CSG,A2,Monday,14:00,15:00,EVS,Dr.Shailesh Janbandhu,CR 304
+1,CSG,A2,Monday,15:00,16:00,APG,Dr.Aatish Daryapurkar,CR 304
+1,CSG,A2,Monday,16:00,17:00,GDDT,Dr.Varsha Kushwah,CR 304
+1,CSG,A2,Monday,17:00,18:00,TUT,Dr.Preeti,CR 304
+1,CSG,A2,Tuesday,08:00,10:00,AE LAB B2,Dr.Mayank Thacker,CR 304
+1,CSG,A2,Tuesday,12:00,13:00,Lunch,,CR 304
+1,CSG,A2,Tuesday,13:00,14:00,AE,Dr.Mayank Thacker,CR 304
+1,CSG,A2,Tuesday,14:00,15:00,AP,Dr.Puja Gudadhe,CR 304
+1,CSG,A2,Tuesday,15:00,16:00,DS,Dr.Neha Kasture,CR 304
+1,CSG,A2,Tuesday,16:00,17:00,EVS,Dr.Shailesh Janbandhu,CR 304
+1,CSG,A2,Wednesday,10:00,12:00,,,CR 304
+1,CSG,A2,Wednesday,12:00,13:00,Lunch,,CR 304
+1,CSG,A2,Wednesday,13:00,14:00,APG,Dr.Aatish Daryapurkar,CR 304
+1,CSG,A2,Wednesday,15:00,16:00,MATH,Dr.Preeti,CR 304
+1,CSG,A2,Wednesday,16:00,17:00,AE,Dr.Mayank Thacker,CR 304
+1,CSG,A2,Thursday,08:00,10:00,DS LAB B2,Dr.Neha Kasture,CR 304
+1,CSG,A2,Thursday,12:00,13:00,Lunch,,CR 304
+1,CSG,A2,Thursday,13:00,14:00,DS,Dr.Neha Kasture,CR 304
+1,CSG,A2,Thursday,14:00,15:00,GDDT,Dr.Varsha Kushwah,CR 304
+1,CSG,A2,Thursday,15:00,16:00,MATH,Dr.Preeti,CR 304
+1,CSG,A2,Thursday,16:00,17:00,APG,Dr.Aatish Daryapurkar,CR 304
+1,CSG,A2,Friday,10:00,12:00,AP LAB B2,Dr.Puja Gudadhe,CR 304
+1,CSG,A2,Friday,12:00,13:00,Lunch,,CR 304
+1,CSG,A2,Friday,13:00,14:00,DS,Dr.Neha Kasture,CR 304
+1,CSG,A2,Friday,14:00,15:00,AE,Dr.Mayank Thacker,CR 304
+1,CSG,A2,Friday,15:00,16:00,MATH,Dr.Preeti,CR 304
+1,CSG,A2,Friday,16:00,17:00,AP,Dr.Puja Gudadhe,CR 304

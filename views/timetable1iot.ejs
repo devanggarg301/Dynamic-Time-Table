@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+    margin: 0px;
+    color:white;
+}
+body{
+    background: linear-gradient(to right, #0d3965, #092039);
+    display: flex;
+    /* overflow: hidden; */
+    margin: 0;
+    padding: 0;
+}
+.navbar {
+    height: 100vh;
+    width: 18%;
+    background: linear-gradient(to right, #0d3965, #092039);
+    border-right: white solid 1px;
+}
+
+.heading {
+    width: 100%;
+    height: 60px;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 20px;
+    padding-top: 8px;
+}
+
+.options {
+    margin:0px;
+    font-size: 20px;
+    padding-top: 20px;
+}
+
+.home {
+    width: 99%;
+    height: 35px;
+    padding-top:35px ;
+}
+a{
+    text-decoration: none;
+}
+.home:hover{
+    animation-duration: 0ms;
+    border: solid 2px gray;
+}
+#current{
+    background-color: #041528;
+}
+.timetable{
+    padding-left: 18px;
+    border-radius: 10px;
+    margin-top: 10px;
+    text-align: center;
+}
+.timetable select, .timetable button {
+    padding: 10px;
+    margin: 10px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: none;
+    color: white;
+    background-color: black;
+}
+.timetable button{
+    background-color: #4A90E2;
+    transition: 0.3s;
+}
+.timetable button:hover{
+    background-color: #2877d2;
+}
+label{
+    font-size: larger;
+    margin-left: 10px;
+}
+h2{
+    font-size: 45px;
+    font-weight: bold;
+    margin-bottom: 22px;
+    margin-left: 30px;
+}
+
+.menu{
+    width: 100%;
+    background-color: #041528;
+    margin-left: 50px;
+    border-radius: 11px;
+    
+}
+.time-table{
+    padding: 0px;
+    text-align: center;
+    margin-top: 40px;
+}
+
+.table{
+    text-align: center;
+    width: 97%;
+    height: 100%;
+    margin: 20px;
+    margin-left: 57px;
+    margin-top: 47px;
+    font-size: large;
+    border-collapse: collapse;
+}
+
+.bottom{
+    height: 500px;
+    width: 100%;
+    height: calc(100vh - 250px);
+}
+
+.vertical-text {
+    writing-mode: vertical-rl;  
+    transform: rotate(180deg);  
+    font-size: xx-large;
+    background-color: rgb(48, 89, 136);
+  }
+  .day{
+    background-color: rgb(7, 20, 40);
+    color: aliceblue;
+    height: 50px;
+  }
+
+  .batch{
+    background-color: rgb(46, 75, 120);
+    color: aliceblue;
+  }
+
+   
+  
+  #current{
+    background-color: #041528;
+  }
+  .khaali{
+    width: 100px;
+  }
+
+
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <div class="heading">
+            <p><h1>Dynamic<br>Time Table</h1></p>
+        </div>
+        <div class="options">
+            <a href="/page"><div class="home">🏠 Home</div></a>
+            <a href="/timetable"><div class="home" id="current">📅 Timetable</div></a>
+          <a href="/notifications">  <div class="home">🔔 Notifications</div></a>
+           <a href="/announcement"> <div class="home">📢 Announcements</div></a>
+           <a href=""> <div class="home">⚙  Settings</div></a>
+    </div>
+    </div>
+    <div class="timetable">
+        <h2>Time Table</h2>
+        <div class="menu">
+        <label for="year">Select Year:</label>
+        <select id="year">
+            <option value="">-- Select Year --</option>
+            <option value="1">1st Year</option>
+            <option value="2">2nd Year</option>
+            <option value="3">3rd Year</option>
+            <option value="4">4th Year</option>
+        </select>
+    
+        <label for="branch">Select Branch:</label>
+        <select id="branch" disabled>
+            <option value="">-- Select Branch --</option>
+            <option value="ece">ECE</option>
+            <option value="iot">IoT</option>
+            <option value="cse">CSE</option>
+            <option value="csd">CSD</option>
+            <option value="csai">CSAI</option>
+            <option value="csg">CSG</option>
+        </select>
+        <label for="section">Select Section:</label>
+        <select id="section" disabled>
+            <option value="">-- Select Section --</option>
+            <option value="A">A</option>
+            <option value="B">B</option>
+            <option value="C">C</option>
+            <option value="NA">NA</option>
+        </select>
+        <button onclick="loadtimetable()">Load Timetable</button>
+        <div class="timetable_loaded"></div>
+        </div>
+    
+
+    <div class="bottom">
+
+         
+
+         <table border="1" class="table">
+
+            <tr>
+
+                <th  class="khaali" > </th>
+                <th class="day" style="padding-top: 22px; margin-top: 0px;text-align: bottom">08:00-10:00 a.m. <br>
+                    (LAB)</th>
+                <th class="day" style="padding-top: 22px; margin-top: 0px;text-align: bottom">10:00-12:00 a.m. <br>
+                (LAB)</th>
+
+                <th class="day">12:00-1:00 p.m.</th>
+
+                <th class="day">01:00-02:00 p.m.</th>
+
+                <th class="day">02:00-03:00 p.m.</th>
+
+                <th class="day">03:00-04:00 p.m.</th>
+
+                <th class="day">04:00-05:00 p.m.</th>
+                 
+
+            </tr>
+
+            <tr>
+
+                <th class="day">Mon.</th>
+
+                <td style="padding: 0px; margin: 0px;height: 80px;"> </td>
+                <td style="padding: 0px; margin: 0px;height: 80px;">DS(A1) <br>WS-1(A2) </td>
+
+                <td rowspan="5" class="vertical-text">Lunch</td>
+
+                <td>DS</td>
+
+                <td>DSDH</td>
+
+                <td>NMPT</td>
+
+                <td>MATHS(A1)</td>
+                 
+
+            </tr>
+
+            <tr>
+
+                <th class="day">Tue.</th>
+                <td style="padding: 0px; margin: 0px;height: 80px;">DSDH(A1) </td>
+
+                <td style="padding: 0px; margin: 0px;height: 80px;">COMSK(A1) </td>
+
+                <td>INTEC</td>
+
+                <td>AICF</td>
+
+                <td>COMSK</td>
+
+                <td>NMPT</td>
+                 
+
+            </tr>
+
+            <tr>
+
+                <th class="day">Wed.</th>
+                <td style="padding: 0px; margin: 0px;height: 80px;">DSDH(A2) </td>
+
+                <td style="padding: 0px; margin: 0px;height: 80px;">  </td>
+
+                <td>DS</td>
+
+                <td>COMSK</td>
+
+                <td>DSDH</td>
+
+                <td>AICF</td>
+               
+
+            </tr>
+
+            <tr>
+
+                <th class="day">Thrus.</th>
+
+                <td style="padding: 0px; margin: 0px;height: 80px;"> </td>
+                <td style="padding: 0px; margin: 0px;height: 80px;">AICF(A1) <br>COMSK(A2) </td>
+
+
+                <td>INTEC</td>
+
+                <td>DS</td>
+
+                <td>NMPT</td>
+
+                <td>MATHS(B2)</td>
+                 
+
+            </tr>
+
+            <tr>
+
+                <th class="day">Fri.</th>
+                <td style="padding: 0px; margin: 0px;height: 80px;">DS(A2) </td>
+
+                <td style="padding: 0px; margin: 0px;height: 80px;">WS-1(A1) <br>AICF(A2)  </td>
+
+                <td>INTEC</td>
+
+                <td>DSDH</td>
+
+                <td>AICF</td>
+                <td></td>
+                 
+
+            </tr>
+
+         </table>
+
+
+
+    </div>
+    </div>
+    <script>
+        let year = document.querySelector('#year');
+        let branch = document.querySelector("#branch");
+        let section = document.querySelector("#section");
+        year.addEventListener("change",()=>{
+            branch.disabled = false;
+        })
+        branch.addEventListener("change",()=>{
+            section.disabled = false;
+        })
+        
+    function loadtimetable()
+    {
+        if (!year.value || !branch.value || !section.value) 
+        {
+        alert("Please select all fields!");
+        return;
+    }
+    window.location.href = `/timetable/${year.value}/${branch.value}/${section.value}`;
+    }
+    </script>
+</body>
+</html>
