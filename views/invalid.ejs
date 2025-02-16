@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #heading{
+            padding-top: 20px;
+            color: white;
+        }
+        #main{
+            text-align: center;
+           
+            width: 490px;
+            height: 440px;
+            position: center;         
+            margin:  auto;
+            border-radius: 16px;
+            background: linear-gradient(to bottom,#213b57,#0a3153);
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+             
+            position: relative;
+            top:90px;
+            
+            box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.6), 0px 12px 30px rgba(0, 0, 0, 0.3);
+
+        }
+
+        body{
+            background: linear-gradient(to right, #0d3965, #092039);
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            margin: 0;
+            padding: 0;
+}
+       
+
+        #name{
+            padding: 0px; 
+            margin-left: 23px; 
+            text-align: left;
+            margin-bottom: 0; 
+            font-size: 20px;
+            font-weight: bold;
+            color: white;
+        }
+
+        #pass{
+            padding: 0px; 
+            margin-left: 23px; 
+            text-align: left;
+            margin-bottom: 0; 
+            font-size: 20px;
+            font-weight: bold;
+            color: white;
+        }
+        
+        button{
+            background-color: #4A90E2;
+            color: white; 
+            width: 90%;
+            height: 42px;
+            border-radius: 9px; 
+            font-size: 18px;
+        }
+
+        #account{
+            font-size: 18px;
+            padding: 0px;
+            color: white;
+        }
+
+        .username{
+            width: 88%;
+            height: 34px; 
+            border-radius: 9px;
+            font-weight: bold;
+  
+        }
+
+        .pass{
+            width: 88%;
+            height: 34px; 
+            border-radius: 9px;
+            font-weight: bold;
+        }
+        a{
+            color: rgb(255, 255, 255);
+        }
+        .wrong{
+            background-color: white;
+            width: 350px;
+            height: 350px;
+            border-radius: 8px;
+            position:fixed;
+            top:150px;
+            left: 600px;
+            opacity: 0.9;
+            /* border: 5px solid #0d3864; */
+        }
+        .wrong_msg{
+            font-weight: 700;
+            font-size: 40px;
+            position: relative;
+            top:60px;
+        }     
+    </style>
+</head>
+<body>
+    <div  id="main">
+        <h1 id="heading">Login</h1>
+        <form action="/page" method="POST">
+        <p id="name"> Username:</p> <br>
+        <input class="username" type="text" name="username" id="username" placeholder="Enter Username"> <br>
+        <p id="pass"> Password:</p> <br>
+        <input  class="pass" type="password" name="password" id="password" placeholder="Enter Password"> <br><br> <br>
+         <button>Login</button> 
+         <p id="account">Do not have an account?</p>
+         <a href="/signup">Sign Up</a>
+        </form>
+        <div class="wrong">
+            <p class="wrong_msg">Invalid Username Or Password</p><br><br><br>
+            <a href="/login"><button>Try Again</button></a>
+        </div>
+    </div>
+</body>
+</html>

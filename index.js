@@ -41,7 +41,7 @@ app.post('/page',(req,res)=>{
             else if(results.length>0){
                 res.render(`page.ejs`,{username});
             }else{
-                res.send("Invalid username or password");
+                res.render("invalid.ejs");
             }
         })
     }catch(err){
@@ -54,21 +54,24 @@ app.post('/signup',(req,res)=>{
     let {username,password} = req.body;
     let q1 = `SELECT * FROM users WHERE username = ?`;
     let q = `INSERT INTO users (username,password) VALUES (?,?)`;
-    try{
+    // try{
         connection.query(q1,[username],(err,results)=>{
             if(results.length>0){
-                return res.send("Username already exists");
+                // return res.send("Username already exists");
+                return res.render("userexist.ejs");
             }
             connection.query(q,[username,password],(err,results)=>{
-                if(err) throw err;
+                // if(err) throw err;
                 res.redirect('/login');
             })
         })
-    }catch(err){
-        console.log(err);
-        res.send("Some Error Occured, Try again later!");
-    }
+    // }
+    // catch(err){
+    //     console.log(err);
+    //     res.send("Some Error Occured, Try again later!");
+    // }
 })
+
 // app.get('/page',(req,res)=>{
 //     res.render("page.ejs");
 // })
